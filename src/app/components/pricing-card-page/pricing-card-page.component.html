@@ -1,0 +1,471 @@
+<main>
+
+  <!----------------------- It can be viewed only in Desktop and Laptop Devices only ( i.e above 769px ). ----------------------->
+  <div class="block Tablet_Design_View:hidden Large_Mobile_Design_View:hidden Small_Mobile_Design_View:hidden">
+    <div class="flex justify-center items-center h-screen w-full overflow-x-hidden overflow-y-auto bg-[#4D46A5] font-Roboto">
+      <div class="flex justify-center items-center h-auto w-auto">
+        <div class="flex flex-col justify-center items-center h-auto w-[640px] bg-[#FFFFFF] p-[69px] rounded-[20px]">
+
+          <!-- I have created three buttons with active state for selecting the mode and it can be viewed only in Desktop and Laptop Devices only -->
+          <div class="flex justify-between items-center h-auto w-full border-[#E3E3E3] border-solid border-2 rounded-[20px] p-[9px]">
+            <button class="flex justify-center items-center h-[72px] w-[132px] text-base font-medium transition-all ease-in-out duration-1000" [ngClass]="basic_mode_button ? 'bg-[#45A69A] text-[#FFFFFF] rounded-[20px]' : 'text-[#000000]'" (click)="basic_mode_button_active()">Basic</button>
+            <button class="flex justify-center items-center h-[72px] w-[132px] text-base font-medium transition-all ease-in-out duration-1000" [ngClass]="standard_mode_button ? 'bg-[#45A69A] text-[#FFFFFF] rounded-[20px]' : 'text-[#000000]'" (click)="standard_mode_button_active()">Standard</button>
+            <button class="flex justify-center items-center h-[72px] w-[132px] text-base font-medium transition-all ease-in-out duration-1000" [ngClass]="premium_mode_button ? 'bg-[#45A69A] text-[#FFFFFF] rounded-[20px]' : 'text-[#000000]'" (click)="premium_mode_button_active()">Premium</button>
+          </div>
+
+          <!-- When the User clicked in Basic Mode. It can be viewed only in Basic Mode and It can be viewed only in Desktop and Laptop Devices only ( i.e above 769px ).  -->
+          <div class="flex flex-col justify-center items-start h-auto w-full p-[51px]" *ngIf="basic_mode_button" [@fadeIn]>
+            <h1 class="text-base text-[#5B5B5E] font-bold">{{"basic"|uppercase}}</h1>
+            <div class="flex justify-start items-center h-auto w-full text-2xl font-bold text-[#000000] mt-3 mb-5">
+              <div class="mr-auto">
+                <span>Icon Sets</span>
+              </div>
+              <div class="ml-auto">
+                <span>$60</span>
+              </div>
+            </div>
+            <p class="text-base font-bold text-[#5B5B5E] w-[348px]">Up to 50 creative & professional  icons + one color versions/themes</p>
+            <ul class="flex flex-col justify-start items-start h-auto w-auto mb-5">
+              <li class="flex justify-center items-center h-auto w-auto my-3">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-[26px] w-[26px] rounded-full">
+                  <img src="images/tick-mark.png" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-3">
+                  <p class="text-base font-medium text-[#5B5B5E]">Included  source files</p>
+                </div>
+              </li>
+              <li class="flex justify-center items-center h-auto w-auto my-3">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-[26px] w-[26px] rounded-full">
+                  <img src="images/wrong-mark.png" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-3">
+                  <p class="text-base font-medium text-[#5B5B5E]">Converted to responsive components</p>
+                </div>
+              </li>
+            </ul>
+            <button class="flex justify-center items-center h-[72px] w-[417px] bg-[#4D46A5] text-[#FFFFFF] text-base font-medium rounded-[36px]">Add to cart</button>
+          </div>
+
+          <!-- When the User clicked in Standard Mode. It can be viewed only in Standard Mode. This is set to as default. It can be viewed only in Desktop and Laptop Devices only ( i.e above 769px ). -->
+          <div class="flex flex-col justify-center items-start h-auto w-full p-[51px]" *ngIf="standard_mode_button" [@fadeIn]>
+            <h1 class="text-base text-[#5B5B5E] font-bold">{{"standard"|uppercase}}</h1>
+            <div class="flex justify-start items-center h-auto w-full text-2xl font-bold text-[#000000] mt-3 mb-5">
+              <div class="mr-auto">
+                <span>Icon Sets</span>
+              </div>
+              <div class="ml-auto">
+                <span>$120</span>
+              </div>
+            </div>
+            <p class="text-base font-bold text-[#5B5B5E] w-[348px]">Up to 100 creative & professional  icons + two color versions/themes per month</p>
+            <ul class="flex flex-col justify-start items-start h-auto w-auto mb-5">
+              <li class="flex justify-center items-center h-auto w-auto my-3">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-[26px] w-[26px] rounded-full">
+                  <img src="images/tick-mark.png" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-3">
+                  <p class="text-base font-medium text-[#5B5B5E]">Included  source files</p>
+                </div>
+              </li>
+              <li class="flex justify-center items-center h-auto w-auto my-3">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-[26px] w-[26px] rounded-full">
+                  <img src="images/tick-mark.png" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-3">
+                  <p class="text-base font-medium text-[#5B5B5E]">Converted to responsive components</p>
+                </div>
+              </li>
+            </ul>
+            <button class="flex justify-center items-center h-[72px] w-[417px] bg-[#4D46A5] text-[#FFFFFF] text-base font-medium rounded-[36px]">Add to cart</button>
+          </div>
+
+          <!-- When the User clicked in Premium Mode. It can be viewed only in Premium Mode and It can be viewed only in Desktop and Laptop Devices only ( i.e above 769px ). -->
+          <div class="flex flex-col justify-center items-start h-auto w-full p-[51px]" *ngIf="premium_mode_button" [@fadeIn]>
+            <h1 class="text-base text-[#5B5B5E] font-bold">{{"premium"|uppercase}}</h1>
+            <div class="flex justify-start items-center h-auto w-full text-2xl font-bold text-[#000000] mt-3 mb-5">
+              <div class="mr-auto">
+                <span>Icon Sets</span>
+              </div>
+              <div class="ml-auto">
+                <span>$180</span>
+              </div>
+            </div>
+            <p class="text-base font-bold text-[#5B5B5E] w-[348px]">Up to 200 creative & professional  icons + four color versions/themes</p>
+            <ul class="flex flex-col justify-start items-start h-auto w-auto mb-5">
+              <li class="flex justify-center items-center h-auto w-auto my-3">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-[26px] w-[26px] rounded-full">
+                  <img src="images/tick-mark.png" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-3">
+                  <p class="text-base font-medium text-[#5B5B5E]">Included  source files</p>
+                </div>
+              </li>
+              <li class="flex justify-center items-center h-auto w-auto my-3">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-[26px] w-[26px] rounded-full">
+                  <img src="images/tick-mark.png" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-3">
+                  <p class="text-base font-medium text-[#5B5B5E]">Converted to responsive components</p>
+                </div>
+              </li>
+            </ul>
+            <button class="flex justify-center items-center h-[72px] w-[417px] bg-[#4D46A5] text-[#FFFFFF] text-base font-medium rounded-[36px]">Add to cart</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!----------------------- It can be viewed only in Tablet Devices only ( from 426px to 769px ). ----------------------->
+  <div class="hidden Tablet_Design_View:block Large_Mobile_Design_View:hidden Small_Mobile_Design_View:hidden">
+    <div class="flex justify-center items-center h-screen w-full overflow-x-hidden overflow-y-auto bg-[#4D46A5] font-Roboto">
+      <div class="flex justify-center items-center h-auto w-auto">
+        <div class="flex flex-col justify-center items-center h-auto w-[400px] bg-[#FFFFFF] px-4 py-20 rounded-[20px]">
+
+          <!-- I have created three buttons with active state for selecting the mode and it can be viewed only in Tablet Devices only ( from 426px to 769px ). -->
+          <div class="flex justify-between items-center h-auto w-full border-[#E3E3E3] border-solid border-2 rounded-[20px] p-2.5">
+            <button class="flex justify-center items-center h-[65px] w-[122px] text-base font-medium transition-all ease-in-out duration-1000" [ngClass]="basic_mode_button ? 'bg-[#45A69A] text-[#FFFFFF] rounded-[20px]' : 'text-[#000000]'" (click)="basic_mode_button_active()">Basic</button>
+            <button class="flex justify-center items-center h-[65px] w-[122px] text-base font-medium transition-all ease-in-out duration-1000 mx-3" [ngClass]="standard_mode_button ? 'bg-[#45A69A] text-[#FFFFFF] rounded-[20px]' : 'text-[#000000]'" (click)="standard_mode_button_active()">Standard</button>
+            <button class="flex justify-center items-center h-[65px] w-[122px] text-base font-medium transition-all ease-in-out duration-1000" [ngClass]="premium_mode_button ? 'bg-[#45A69A] text-[#FFFFFF] rounded-[20px]' : 'text-[#000000]'" (click)="premium_mode_button_active()">Premium</button>
+          </div>
+
+          <!-- When the User clicked in Basic Mode. It can be viewed only in Basic Mode and It can be viewed only in Tablet Devices only ( from 426px to 769px ). -->
+          <div class="flex flex-col justify-center items-start h-auto w-full p-8" *ngIf="basic_mode_button" [@fadeIn]>
+            <h1 class="text-base text-[#5B5B5E] font-bold">{{"basic"|uppercase}}</h1>
+            <div class="flex justify-start items-center h-auto w-full text-2xl font-bold text-[#000000] mt-3 mb-5">
+              <div class="mr-auto">
+                <span>Icon Sets</span>
+              </div>
+              <div class="ml-auto">
+                <span>$60</span>
+              </div>
+            </div>
+            <p class="text-base font-bold text-[#5B5B5E] w-auto">Up to 50 creative & professional  icons + one color versions/themes</p>
+            <ul class="flex flex-col justify-start items-start h-auto w-auto mb-5">
+              <li class="flex justify-center items-center h-auto w-auto my-3">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-[26px] w-[26px] rounded-full">
+                  <img src="images/tick-mark.png" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-base font-medium text-[#5B5B5E]">Included  source files</p>
+                </div>
+              </li>
+              <li class="flex justify-center items-center h-auto w-auto my-3">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-[26px] w-[26px] rounded-full">
+                  <img src="images/wrong-mark.png" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-base font-medium text-[#5B5B5E]">Converted to responsive components</p>
+                </div>
+              </li>
+            </ul>
+            <button class="flex justify-center items-center h-[72px] w-full bg-[#4D46A5] text-[#FFFFFF] text-base font-medium rounded-[36px]">Add to cart</button>
+          </div>
+
+          <!-- When the User clicked in Standard Mode. It can be viewed only in Standard Mode and It can be viewed only in Tablet Devices only ( from 426px to 769px ). -->
+          <div class="flex flex-col justify-center items-start h-auto w-full p-8" *ngIf="standard_mode_button" [@fadeIn]>
+            <h1 class="text-base text-[#5B5B5E] font-bold">{{"standard"|uppercase}}</h1>
+            <div class="flex justify-start items-center h-auto w-full text-2xl font-bold text-[#000000] mt-3 mb-5">
+              <div class="mr-auto">
+                <span>Icon Sets</span>
+              </div>
+              <div class="ml-auto">
+                <span>$120</span>
+              </div>
+            </div>
+            <p class="text-base font-bold text-[#5B5B5E] w-auto">Up to 100 creative & professional  icons + two color versions/themes per month</p>
+            <ul class="flex flex-col justify-start items-start h-auto w-auto mb-5">
+              <li class="flex justify-center items-center h-auto w-auto my-3">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-[26px] w-[26px] rounded-full">
+                  <img src="images/tick-mark.png" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-base font-medium text-[#5B5B5E]">Included  source files</p>
+                </div>
+              </li>
+              <li class="flex justify-center items-center h-auto w-auto my-3">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-[26px] w-[26px] rounded-full">
+                  <img src="images/tick-mark.png" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-base font-medium text-[#5B5B5E]">Converted to responsive components</p>
+                </div>
+              </li>
+            </ul>
+            <button class="flex justify-center items-center h-[72px] w-full bg-[#4D46A5] text-[#FFFFFF] text-base font-medium rounded-[36px]">Add to cart</button>
+          </div>
+
+          <!-- When the User clicked in Premium Mode. It can be viewed only in Premium Mode and It can be viewed only in Tablet Devices only ( from 426px to 769px ). -->
+          <div class="flex flex-col justify-center items-start h-auto w-full p-8" *ngIf="premium_mode_button" [@fadeIn]>
+            <h1 class="text-base text-[#5B5B5E] font-bold">{{"premium"|uppercase}}</h1>
+            <div class="flex justify-start items-center h-auto w-full text-2xl font-bold text-[#000000] mt-3 mb-5">
+              <div class="mr-auto">
+                <span>Icon Sets</span>
+              </div>
+              <div class="ml-auto">
+                <span>$180</span>
+              </div>
+            </div>
+            <p class="text-base font-bold text-[#5B5B5E] w-auto">Up to 200 creative & professional  icons + four color versions/themes</p>
+            <ul class="flex flex-col justify-start items-start h-auto w-auto mb-5">
+              <li class="flex justify-center items-center h-auto w-auto my-3">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-[26px] w-[26px] rounded-full">
+                  <img src="images/tick-mark.png" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-base font-medium text-[#5B5B5E]">Included  source files</p>
+                </div>
+              </li>
+              <li class="flex justify-center items-center h-auto w-auto my-3">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-[26px] w-[26px] rounded-full">
+                  <img src="images/tick-mark.png" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-base font-medium text-[#5B5B5E]">Converted to responsive components</p>
+                </div>
+              </li>
+            </ul>
+            <button class="flex justify-center items-center h-[72px] w-full bg-[#4D46A5] text-[#FFFFFF] text-base font-medium rounded-[36px]">Add to cart</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!----------------------- It can be viewed only in Large Mobile Design View ( from 321px to 426px ). ----------------------->
+  <div class="hidden Tablet_Design_View:hidden Large_Mobile_Design_View:block Small_Mobile_Design_View:hidden">
+    <div class="flex justify-center items-center h-screen w-full overflow-x-hidden overflow-y-auto bg-[#4D46A5] font-Roboto">
+      <div class="flex justify-center items-center h-auto w-auto">
+        <div class="flex flex-col justify-center items-center h-auto max-w-72 bg-[#FFFFFF] py-[60px] px-2.5 rounded-2xl">
+
+          <!-- I have created three buttons with active state for selecting the mode and it can be viewed only in Large Mobile Design View ( from 321px to 426px ). -->
+          <div class="flex justify-between items-center h-auto w-full border-[#E3E3E3] border-solid border-2 rounded-2xl p-2.5">
+            <button class="flex justify-center items-center h-14 w-24 text-xs font-medium transition-all ease-in-out duration-1000" [ngClass]="basic_mode_button ? 'bg-[#45A69A] text-[#FFFFFF] rounded-2xl' : 'text-[#000000]'" (click)="basic_mode_button_active()">Basic</button>
+            <button class="flex justify-center items-center h-14 w-24 text-xs font-medium transition-all ease-in-out duration-1000 mx-2" [ngClass]="standard_mode_button ? 'bg-[#45A69A] text-[#FFFFFF] rounded-2xl' : 'text-[#000000]'" (click)="standard_mode_button_active()">Standard</button>
+            <button class="flex justify-center items-center h-14 w-24 text-xs font-medium transition-all ease-in-out duration-1000" [ngClass]="premium_mode_button ? 'bg-[#45A69A] text-[#FFFFFF] rounded-2xl' : 'text-[#000000]'" (click)="premium_mode_button_active()">Premium</button>
+          </div>
+
+          <!-- When the User clicked in Basic Mode. It can be viewed only in Basic Mode and It can be viewed only in Large Mobile Design View ( from 321px to 426px ). -->
+          <div class="flex flex-col justify-center items-start h-auto w-full p-5" *ngIf="basic_mode_button" [@fadeIn]>
+            <h1 class="text-xs text-[#5B5B5E] font-bold">{{"basic"|uppercase}}</h1>
+            <div class="flex justify-start items-center h-auto w-full text-lg font-bold text-[#000000] my-2">
+              <div class="mr-auto">
+                <span>Icon Sets</span>
+              </div>
+              <div class="ml-auto">
+                <span>$60</span>
+              </div>
+            </div>
+            <p class="text-xs font-bold text-[#5B5B5E] w-full">Up to 50 creative & professional  icons + two color versions/themes</p>
+            <ul class="flex flex-col justify-start items-start h-auto w-full my-4">
+              <li class="flex justify-center items-center h-auto w-auto">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-4 w-4 rounded-full">
+                  <img src="images/tick-mark.png" class="h-2 w-2" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-xs font-medium text-[#5B5B5E]">Included  source files</p>
+                </div>
+              </li>
+              <li class="flex justify-center items-center h-auto w-auto mt-2">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-4 w-4 rounded-full">
+                  <img src="images/wrong-mark.png" class="h-2 w-2" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-xs font-medium text-[#5B5B5E]">Converted to responsive components</p>
+                </div>
+              </li>
+            </ul>
+            <button class="flex justify-center items-center h-14 w-full bg-[#4D46A5] text-[#FFFFFF] text-xs font-medium rounded-full">Add to cart</button>
+          </div>
+
+          <!-- When the User clicked in Standard Mode. It can be viewed only in Standard Mode and It can be viewed only in Large Mobile Design View ( from 321px to 426px ). -->
+          <div class="flex flex-col justify-center items-start h-auto w-full p-5" *ngIf="standard_mode_button" [@fadeIn]>
+            <h1 class="text-xs text-[#5B5B5E] font-bold">{{"standard"|uppercase}}</h1>
+            <div class="flex justify-start items-center h-auto w-full text-lg font-bold text-[#000000] my-2">
+              <div class="mr-auto">
+                <span>Icon Sets</span>
+              </div>
+              <div class="ml-auto">
+                <span>$120</span>
+              </div>
+            </div>
+            <p class="text-xs font-bold text-[#5B5B5E] w-full">Up to 100 creative & professional  icons + two color versions/themes per month</p>
+            <ul class="flex flex-col justify-start items-start h-auto w-full my-4">
+              <li class="flex justify-center items-center h-auto w-auto">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-4 w-4 rounded-full">
+                  <img src="images/tick-mark.png" class="h-2 w-2" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-xs font-medium text-[#5B5B5E]">Included  source files</p>
+                </div>
+              </li>
+              <li class="flex justify-center items-center h-auto w-auto mt-2">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-4 w-4 rounded-full">
+                  <img src="images/tick-mark.png" class="h-2 w-2" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-xs font-medium text-[#5B5B5E]">Converted to responsive components</p>
+                </div>
+              </li>
+            </ul>
+            <button class="flex justify-center items-center h-14 w-full bg-[#4D46A5] text-[#FFFFFF] text-xs font-medium rounded-full">Add to cart</button>
+          </div>
+
+          <!-- When the User clicked in Premium Mode. It can be viewed only in Premium Mode and It can be viewed only in Large Mobile Design View ( from 321px to 426px ). -->
+          <div class="flex flex-col justify-center items-start h-auto w-full p-5" *ngIf="premium_mode_button" [@fadeIn]>
+            <h1 class="text-xs text-[#5B5B5E] font-bold">{{"premium"|uppercase}}</h1>
+            <div class="flex justify-start items-center h-auto w-full text-lg font-bold text-[#000000] my-2">
+              <div class="mr-auto">
+                <span>Icon Sets</span>
+              </div>
+              <div class="ml-auto">
+                <span>$180</span>
+              </div>
+            </div>
+            <p class="text-xs font-bold text-[#5B5B5E] w-full">Up to 200 creative & professional  icons + four color versions/themes</p>
+            <ul class="flex flex-col justify-start items-start h-auto w-full my-4">
+              <li class="flex justify-center items-center h-auto w-auto">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-4 w-4 rounded-full">
+                  <img src="images/tick-mark.png" class="h-2 w-2" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-xs font-medium text-[#5B5B5E]">Included  source files</p>
+                </div>
+              </li>
+              <li class="flex justify-center items-center h-auto w-auto mt-2">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-4 w-4 rounded-full">
+                  <img src="images/tick-mark.png" class="h-2 w-2" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-xs font-medium text-[#5B5B5E]">Converted to responsive components</p>
+                </div>
+              </li>
+            </ul>
+            <button class="flex justify-center items-center h-14 w-full bg-[#4D46A5] text-[#FFFFFF] text-xs font-medium rounded-full">Add to cart</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!----------------------- It can be viewed only in Small Mobile Design View ( from 0px to 321px ). ----------------------->
+  <div class="hidden Tablet_Design_View:hidden Large_Mobile_Design_View:hidden Small_Mobile_Design_View:block">
+    <div class="flex justify-center items-center h-screen w-full overflow-x-hidden overflow-y-auto bg-[#4D46A5] font-Roboto">
+      <div class="flex justify-center items-center h-auto w-auto">
+        <div class="flex flex-col justify-center items-center h-auto max-w-64 bg-[#FFFFFF] py-14 px-2.5 rounded-2xl">
+
+          <!-- I have created three buttons with active state for selecting the mode and it can be viewed only in Small Mobile Design View ( from 0px to 321px ). -->
+          <div class="flex justify-between items-center h-auto w-full border-[#E3E3E3] border-solid border-2 rounded-2xl p-2">
+            <button class="flex justify-center items-center h-12 w-20 text-[10px] font-medium transition-all ease-in-out duration-1000" [ngClass]="basic_mode_button ? 'bg-[#45A69A] text-[#FFFFFF] rounded-2xl' : 'text-[#000000]'" (click)="basic_mode_button_active()">Basic</button>
+            <button class="flex justify-center items-center h-12 w-20 text-[10px] font-medium transition-all ease-in-out duration-1000 mx-2" [ngClass]="standard_mode_button ? 'bg-[#45A69A] text-[#FFFFFF] rounded-2xl' : 'text-[#000000]'" (click)="standard_mode_button_active()">Standard</button>
+            <button class="flex justify-center items-center h-12 w-20 text-[10px] font-medium transition-all ease-in-out duration-1000" [ngClass]="premium_mode_button ? 'bg-[#45A69A] text-[#FFFFFF] rounded-2xl' : 'text-[#000000]'" (click)="premium_mode_button_active()">Premium</button>
+          </div>
+
+          <!-- When the User clicked in Basic Mode. It can be viewed only in Basic Mode and It can be viewed only in Small Mobile Design View ( from 0px to 321px ). -->
+          <div class="flex flex-col justify-center items-start h-auto w-full p-6" *ngIf="basic_mode_button" [@fadeIn]>
+            <h1 class="text-[10px] text-[#5B5B5E] font-bold">{{"basic"|uppercase}}</h1>
+            <div class="flex justify-start items-center h-auto w-full text-base font-bold text-[#000000] my-2">
+              <div class="mr-auto">
+                <span>Icon Sets</span>
+              </div>
+              <div class="ml-auto">
+                <span>$60</span>
+              </div>
+            </div>
+            <p class="text-[10px] font-bold text-[#5B5B5E] w-full">Up to 50 creative & professional  icons + one color versions/themes</p>
+            <ul class="flex flex-col justify-start items-start h-auto w-full my-3.5">
+              <li class="flex justify-center items-center h-auto w-auto">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-3 w-3 rounded-full">
+                  <img src="images/tick-mark.png" class="h-1.5 w-1.5" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-[10px] font-medium text-[#5B5B5E]">Included  source files</p>
+                </div>
+              </li>
+              <li class="flex justify-center items-center h-auto w-auto mt-2">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-3 w-3 rounded-full">
+                  <img src="images/wrong-mark.png" class="h-1.5 w-1.5" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-[10px] font-medium text-[#5B5B5E]">Converted to responsive components</p>
+                </div>
+              </li>
+            </ul>
+            <button class="flex justify-center items-center h-12 w-full bg-[#4D46A5] text-[#FFFFFF] text-[10px] font-medium rounded-full">Add to cart</button>
+          </div>
+
+          <!-- When the User clicked in Standard Mode. It can be viewed only in Standard Mode and It can be viewed only in Small Mobile Design View ( from 0px to 321px ). -->
+          <div class="flex flex-col justify-center items-start h-auto w-full p-6" *ngIf="standard_mode_button" [@fadeIn]>
+            <h1 class="text-[10px] text-[#5B5B5E] font-bold">{{"standard"|uppercase}}</h1>
+            <div class="flex justify-start items-center h-auto w-full text-base font-bold text-[#000000] my-2">
+              <div class="mr-auto">
+                <span>Icon Sets</span>
+              </div>
+              <div class="ml-auto">
+                <span>$120</span>
+              </div>
+            </div>
+            <p class="text-[10px] font-bold text-[#5B5B5E] w-full">Up to 100 creative & professional  icons + two color versions/themes per month</p>
+            <ul class="flex flex-col justify-start items-start h-auto w-full my-3.5">
+              <li class="flex justify-center items-center h-auto w-auto">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-3 w-3 rounded-full">
+                  <img src="images/tick-mark.png" class="h-1.5 w-1.5" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-[10px] font-medium text-[#5B5B5E]">Included  source files</p>
+                </div>
+              </li>
+              <li class="flex justify-center items-center h-auto w-auto mt-2">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-3 w-3 rounded-full">
+                  <img src="images/tick-mark.png" class="h-1.5 w-1.5" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-[10px] font-medium text-[#5B5B5E]">Converted to responsive components</p>
+                </div>
+              </li>
+            </ul>
+            <button class="flex justify-center items-center h-12 w-full bg-[#4D46A5] text-[#FFFFFF] text-[10px] font-medium rounded-full">Add to cart</button>
+          </div>
+
+          <!-- When the User clicked in Premium Mode. It can be viewed only in Premium Mode and It can be viewed only in Small Mobile Design View ( from 0px to 321px ). -->
+          <div class="flex flex-col justify-center items-start h-auto w-full p-6" *ngIf="premium_mode_button" [@fadeIn]>
+            <h1 class="text-[10px] text-[#5B5B5E] font-bold">{{"premium"|uppercase}}</h1>
+            <div class="flex justify-start items-center h-auto w-full text-base font-bold text-[#000000] my-2">
+              <div class="mr-auto">
+                <span>Icon Sets</span>
+              </div>
+              <div class="ml-auto">
+                <span>$180</span>
+              </div>
+            </div>
+            <p class="text-[10px] font-bold text-[#5B5B5E] w-full">Up to 200 creative & professional  icons + four color versions/themes</p>
+            <ul class="flex flex-col justify-start items-start h-auto w-full my-3.5">
+              <li class="flex justify-center items-center h-auto w-auto">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-3 w-3 rounded-full">
+                  <img src="images/tick-mark.png" class="h-1.5 w-1.5" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-[10px] font-medium text-[#5B5B5E]">Included  source files</p>
+                </div>
+              </li>
+              <li class="flex justify-center items-center h-auto w-auto mt-2">
+                <div class="flex justify-center items-center bg-[#E0DFF6] h-3 w-3 rounded-full">
+                  <img src="images/tick-mark.png" class="h-1.5 w-1.5" alt="I have attached Tick mark icon." />
+                </div>
+                <div class="ml-2">
+                  <p class="text-[10px] font-medium text-[#5B5B5E]">Converted to responsive components</p>
+                </div>
+              </li>
+            </ul>
+            <button class="flex justify-center items-center h-12 w-full bg-[#4D46A5] text-[#FFFFFF] text-[10px] font-medium rounded-full">Add to cart</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>

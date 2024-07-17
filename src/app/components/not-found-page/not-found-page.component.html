@@ -1,0 +1,29 @@
+<main>
+
+  <!----------------------- It can be viewed only on large/small Laptop & Desktop devices and also displays Tablet devices.  ----------------------->
+  <div class="block Tablet_Design_View:block Large_Mobile_Design_View:hidden Small_Mobile_Design_View:hidden">
+    <div class="flex justify-center items-center h-screen w-full overflow-x-hidden overflow-y-auto font-mono">
+      <div class="flex justify-center items-center h-auto w-auto">
+        <div class="flex flex-col justify-center items-center h-auto w-72">
+          <h1 class="text-5xl font-bold text-[#4D46A5]">404</h1>
+          <p class="text-xl font-bold text-[#4D46A5] text-center my-3">Sorry, we coundn't find this page</p>
+          <a class="bg-[#4D46A5] text-white px-5 py-3 rounded-xl border-solid border-2 border-[#4D46A5] hover:border-solid hover:border-2 hover:border-[#4D46A5] hover:bg-white hover:text-[#4D46A5]" href="" [routerLink]="['/']" >Back to Home Page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!----------------------- It can be viewed only on Mobile devices only. ----------------------->
+  <div class="hidden Tablet_Design_View:hidden Large_Mobile_Design_View:block Small_Mobile_Design_View:block">
+    <div class="flex justify-center items-center h-screen w-full overflow-x-hidden overflow-y-auto font-mono">
+      <div class="flex justify-center items-center h-auto w-auto">
+        <div class="flex flex-col justify-center items-center h-auto w-72">
+          <h1 class="text-5xl font-bold text-[#4D46A5]">404</h1>
+          <p class="text-xl font-bold text-[#4D46A5] text-center my-10">Sorry, we coundn't find this page</p>
+          <a class="bg-[#4D46A5] text-white px-5 py-3 rounded-xl" href="" [routerLink]="['/']" >Back to Home Page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
