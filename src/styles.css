@@ -1,7 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+/* ----------------------- I imported the "Roboto" font from Google fonts to the entire angular application. ----------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* You can add global styles to this file, and also import other style files */
+/* ----------------------- I added the @tailwind directives for each of Tailwind’s layers to this CSS file. ----------------------- */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* ----------------------- I also added the custom scroll-bar to the entire angular application. ----------------------- */
+
+/* I have adjusted the width of the scrollbar. */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* I have styled the background-color of the scrollbar. */
+::-webkit-scrollbar-button {
+  background-color: #4D46A5;
+}
+
+/* I have styled the layout of the scroll-bar-thumb. */
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 10px;
+}
+
+/* I have styled the hovering layout of the scroll-bar-thumb. */
+::-webkit-scrollbar-thumb:hover {
+  background-color: lightgray;
+}
